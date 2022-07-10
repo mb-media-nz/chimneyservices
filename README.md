@@ -1,10 +1,9 @@
 # Chimney Services
 
-A Svelt app.
+A Svelte app.
 
 ## To Do
-Anchor links don't change on page change
- responsiveness
+Anchor links don't change on page change responsiveness
 SEO
 
 
