@@ -3,10 +3,9 @@
 A Svelte app.
 
 ## To Do
+404 page?
 Anchor links don't change on page change responsiveness
 SEO
-
-
 
 Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
 

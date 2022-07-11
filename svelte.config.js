@@ -7,15 +7,15 @@ const config = {
 	// for more information about preprocessors
 	preprocess: [
 		preprocess({
-			postcss: true,
-		  }),
+			postcss: true
+		})
 	],
 
 	kit: {
 		adapter: adapter(),
 		prerender: {
-			default: true,	
-		},
+			default: true
+		}
 	}
 };
 
