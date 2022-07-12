@@ -1,17 +1,6 @@
 <script>
 	import Banner from './base/banner.svelte';
 	import BookBar from './base/bookBar.svelte';
-
-	const faqs = [
-		{
-			q: 'Why is my fire smoking out the door?',
-			a: 'It needs to be serviced and is likely blocked with a bird nest or soot.'
-		},
-		{
-			q: 'What type of wood should I burn?',
-			a: 'We recommend you burn dry wood, if purchased from an Ecan approved supplier you can guarantee this.'
-		}
-	];
 </script>
 
 <svelte:head>
