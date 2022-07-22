@@ -1,6 +1,11 @@
-<script>
+<script lang="ts">
+import { onDestroy, onMount } from 'svelte';
+
 	import Banner from './base/banner.svelte';
 	import BookBar from './base/bookBar.svelte';
+
+
+
 
 	const homeServices = [
 		{
@@ -77,7 +82,7 @@
 		const words = curr.quote.split(' ').length;
 		return words > acc.words ? { ...curr, words } : acc;
 	}, { words: 0 });
-	console.log(largestTestimonal);
+	//console.log(largestTestimonal);
 
 	let currentTestimonial = 0
 
@@ -94,13 +99,39 @@
 	const updateTestimonial = () => {
 		console.log("currentTestimonial: ", currentTestimonial)
 
-		// Update UI of which one is shown
-		// ... or do I just add a swiper library
+		// Update every .testimonial-card to have class of opacity-0
+		document.querySelectorAll('.testimonial-card').forEach((el)=> {
+			el.classList.add('opacity-0')
+		})
+		
+		document.querySelectorAll('.testimonial-card')[currentTestimonial].classList.remove('opacity-0')
 	}
 
 	
+	let homeTimer:any = null	
+
+	onMount( () => {
+		// Every 4 seconds change the banner text
+		let currentHomeBannerText = 0
+
+		homeTimer = setInterval(() => {
+			currentHomeBannerText = (currentHomeBannerText == 2) ? 0 : currentHomeBannerText+1 
+			document.querySelectorAll('.home-text-container').forEach((el)=> {
+				el.classList.add('opacity-0')
+			})
+			document.querySelectorAll('.home-text-container')[currentHomeBannerText].classList.remove('opacity-0')
+		} , 4500)
+	});
+
+	onDestroy( () => {
+		clearInterval(homeTimer)
+	} )
+
 	
 
+
+
+	 
 
 </script>
 
@@ -112,7 +143,57 @@
 	/>
 </svelte:head>
 
-<Banner title={'Murray’s Chimney Services'} image={'./about-banner.webp'} />
+<!-- Home Banner -->
+<div
+	style="background-image: url('./home-banner.webp')"
+	class="bg-center flex justify-center items-center min-h-[500px] relative bg-no-repeat bg-cover"
+>
+	<div class="absolute left-0 top-0 w-full h-full bg-black bg-opacity-30" />
+
+	<div class="home-text-container transition-opacity absolute top-0 left-0 w-full h-full flex justify-center items-center flex-col z-10 text-white text-center">
+		<h1 class=" text-4xl bg-redTheme bg-opacity-60 p-1  relative mb-10">Murray’s Chimney Services</h1>
+		<p class="max-w-screen-md text-white">South Canterbury log burner inspections, chimney sweeping, repairs, installations and more.</p>
+		<div class="absolute bottom-4 flex">
+			<div class="mx-1 bg-white w-2 h-2 rounded-full"></div>
+			<div class="mx-1 bg-white w-2 h-2 rounded-full opacity-30"></div>
+			<div class="mx-1 bg-white w-2 h-2 rounded-full opacity-30"></div>
+		</div>
+	</div>
+
+	<div class="opacity-0 transition-opacity home-text-container absolute top-0 left-0 w-full h-full flex justify-center items-center flex-col z-10 text-white text-center">
+		<h2 class="text-center text-4xl  bg-opacity-60 p-1 z-10 relative mb-10">Healthier Homes Canterbury</h2>
+		<p class="max-w-screen-md text-white">Borrow up to $6,000 for heating/installation costs, and put it on your rates bill to be paid back over 9 years at a set interest rate through ECan's Healthier Homes Canterbury scheme.</p>
+		<a
+			href="/healthier-homes"
+			class="mt-10 uppercase inline-block text-white bg-redTheme hover:bg-redThemeDark transition-colors px-8 mb-10 py-3 text-sm"
+			>Read More</a
+		>
+		<div class="absolute bottom-4 flex">
+			<div class="mx-1 bg-white w-2 h-2 rounded-full opacity-30"></div>
+			<div class="mx-1 bg-white w-2 h-2 rounded-full"></div>
+			<div class="mx-1 bg-white w-2 h-2 rounded-full opacity-30"></div>
+		</div>
+	</div>
+
+	<div class="opacity-0 transition-opacity home-text-container absolute top-0 left-0 w-full h-full flex justify-center items-center flex-col z-10 text-white text-center">
+		<h2 class=" text-center text-4xl bg-opacity-60 p-1 z-10 relative mb-10">Contact Us Online</h2>
+		<p class="max-w-screen-md text-white">Contact is today to book your chimney sweep by calling us or via email on the Contact page.</p>
+		<a
+			href="/contact"
+			class="mt-10 uppercase inline-block text-white bg-redTheme hover:bg-redThemeDark transition-colors px-8 mb-10 py-3 text-sm"
+			>Contact</a
+		>
+		<div class="absolute bottom-4 flex">
+			<div class="mx-1 bg-white w-2 h-2 rounded-full opacity-30"></div>
+			<div class="mx-1 bg-white w-2 h-2 rounded-full opacity-30"></div>
+			<div class="mx-1 bg-white w-2 h-2 rounded-full"></div>
+		</div>
+	</div>
+
+	
+	
+</div>
+
 
 <!-- Intro -->
 <div class="p-4 text-center max-w-screen-lg mx-auto">
@@ -128,7 +209,7 @@
 </div>
 
 <!-- Services -->
-<div class="max-w-screen-lg flex flex-wrap mx-auto">
+<div class="max-w-screen-lg flex flex-wrap mx-auto mb-10">
 {#each homeServices as service}
 	<div class="p-4 w-full sm:w-1/2 md:w-1/4 mb-4 p-6">
 		<div class="rounded-lg w-full pb-[70%] relative overflow-hidden">
@@ -159,7 +240,7 @@
 		
 
 		{#each testimonials as testimonial, index}
-			<div class="testimonial-card z-10 w-full absolute top-1/2 -translate-y-1/2 left-0 {(!index) ? "" : "opacity-0"}">
+			<div class="testimonial-card transition-opacity z-10 w-full absolute top-1/2 -translate-y-1/2 left-0 {(!index) ? "" : "opacity-0"}">
 				<p class="text-white text-xl">{testimonial.quote}</p>
 				<p class="text-white font-bold mt-6">- {testimonial.name}</p>
 			</div>
@@ -169,6 +250,30 @@
 
 
 <!-- About -->
+<div class="flex flex-col md:flex-row max-w-screen-lg mx-auto my-10 md:my-20 p-8">
+	<div class="w-full md:w-2/3">
+		<h4 class="text-4xl mt-6 mb-6 text-gray-900">About Us</h4>
+		<p>Murray’s Chimney Services has been operating in South Canterbury for over 50 years, servicing locally as well as in the surrounding districts.</p>
+		<p>Working with our technicians provides the following benefits:</p>
+		<ul class="list-disc pl-10 mt-4 mb-10">
+			<li>Ecan Healthier Homes Scheme approved contractor</li>
+			<li>NZHHA accredited installer</li>
+			<li>NZHHA accredited chimney sweep</li>
+			<li>Gold card NZ</li>
+		</ul>
+		<a
+			href="/about"
+			class="uppercase inline-block text-white bg-redTheme hover:bg-redThemeDark transition-colors px-8 mb-10 py-3 text-sm"
+			>Read More</a
+		>
+	</div>
+	<div class="w-full flex md:block md:w-1/3 p-2 md:p-8">
+		<img class="w-1/3 md:w-full" src="/logo-ecan-long.webp" alt="ECan Logo">
+		<img class="w-1/3 md:w-full" src="/logo-hha-long.webp" alt="NZ HHA Logo">
+		<img class="w-1/3 md:w-full" src="/logo-super-gold-long.webp" alt="Super Gold Logo">
+	</div>
+
+</div>
 
 <BookBar />
 

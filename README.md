@@ -3,11 +3,16 @@
 A Svelte app.
 
 ## To Do
-404 page?
-Anchor links don't change on page change responsiveness
-SEO
+
+*Create Contact Page
+*SEO checks
+*Screenshot old site
+*Take SEO screenshots of old site
+*Clean up code for other people to see
 
 Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+
+---
 
 ## Creating a project
 

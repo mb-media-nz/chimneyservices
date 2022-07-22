@@ -1,29 +1,9 @@
 <script>
 	import { onMount } from 'svelte';
-
+	import { updateActiveMenu } from '../../lib/common';
+	
 	onMount(async () => {
-		// Check url and set link to active
-		const links = document.querySelectorAll('.nav-li a');
-		const url = window.location.pathname;
-		console.log(url);
-		links.forEach((link) => {
-			link.classList.remove('text-gray-500');
-			if (link.getAttribute('href') === url) {
-				link.classList.add('text-gray-500');
-			}
-		});
-
-		// When click nav-icon, toggle mobile menu
-		const navIcon = document.querySelector('#nav-icon');
-		const menuList = document.querySelector('.mobile-menu');
-
-		if (navIcon) {
-			navIcon.addEventListener('click', () => {
-				console.log('clikc');
-				navIcon.classList.toggle('open');
-				menuList.classList.toggle('open');
-			});
-		}
+		updateActiveMenu(window.location.pathname)
 	});
 
 	// Create menu links
