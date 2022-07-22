@@ -3,8 +3,7 @@
 A Svelte app.
 
 ## To Do
-
-*Create Contact Page
+*Create Contact Page Form
 *SEO checks
 *Screenshot old site
 *Take SEO screenshots of old site
