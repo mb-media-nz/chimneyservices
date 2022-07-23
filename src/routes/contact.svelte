@@ -70,7 +70,7 @@
 </div>
 
 <!-- Contact Form -->
-<form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="flex flex-col max-w-xl mx-auto px-6 mb-20">
+<form on:submit|preventDefault name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="flex flex-col max-w-xl mx-auto px-6 mb-20">
     <input required class="border p-2 my-2" type="text" name="name" placeholder="Name" />
     <input required class="border p-2 my-2" type="email" name="Email" placeholder="Email" />
     <input class="border p-2 my-2" type="tel" name="Phone" placeholder="Phone" />
