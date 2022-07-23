@@ -151,8 +151,8 @@ import { onDestroy, onMount } from 'svelte';
 	<div class="absolute left-0 top-0 w-full h-full bg-black bg-opacity-30" />
 
 	<div class="home-text-container transition-opacity absolute top-0 left-0 w-full h-full flex justify-center items-center flex-col z-10 text-white text-center">
-		<h1 class=" text-4xl bg-redTheme bg-opacity-60 p-1  relative mb-10">Murray’s Chimney Services</h1>
-		<p class="max-w-screen-md text-white">South Canterbury log burner inspections, chimney sweeping, repairs, installations and more.</p>
+		<h1 class=" text-4xl bg-redTheme bg-opacity-60 p-1  relative mb-10 p-2">Murray’s Chimney Services</h1>
+		<p class="max-w-screen-md text-white p-2">South Canterbury log burner inspections, chimney sweeping, repairs, installations and more.</p>
 		<div class="absolute bottom-4 flex">
 			<div class="mx-1 bg-white w-2 h-2 rounded-full"></div>
 			<div class="mx-1 bg-white w-2 h-2 rounded-full opacity-30"></div>
@@ -161,8 +161,8 @@ import { onDestroy, onMount } from 'svelte';
 	</div>
 
 	<div class="opacity-0 transition-opacity home-text-container absolute top-0 left-0 w-full h-full flex justify-center items-center flex-col z-10 text-white text-center">
-		<h2 class="text-center text-4xl  bg-opacity-60 p-1 z-10 relative mb-10">Healthier Homes Canterbury</h2>
-		<p class="max-w-screen-md text-white">Borrow up to $6,000 for heating/installation costs, and put it on your rates bill to be paid back over 9 years at a set interest rate through ECan's Healthier Homes Canterbury scheme.</p>
+		<h2 class="text-center text-4xl  bg-opacity-60 p-1 z-10 relative mb-10 p-2">Healthier Homes Canterbury</h2>
+		<p class="max-w-screen-md text-white p-2">Borrow up to $6,000 for heating/installation costs, and put it on your rates bill to be paid back over 9 years at a set interest rate through ECan's Healthier Homes Canterbury scheme.</p>
 		<a
 			href="/healthier-homes"
 			class="mt-10 uppercase inline-block text-white bg-redTheme hover:bg-redThemeDark transition-colors px-8 mb-10 py-3 text-sm"
@@ -176,8 +176,8 @@ import { onDestroy, onMount } from 'svelte';
 	</div>
 
 	<div class="opacity-0 transition-opacity home-text-container absolute top-0 left-0 w-full h-full flex justify-center items-center flex-col z-10 text-white text-center">
-		<h2 class=" text-center text-4xl bg-opacity-60 p-1 z-10 relative mb-10">Contact Us Online</h2>
-		<p class="max-w-screen-md text-white">Contact is today to book your chimney sweep by calling us or via email on the Contact page.</p>
+		<h2 class=" text-center text-4xl bg-opacity-60 p-1 z-10 relative mb-10 p-2">Contact Us Online</h2>
+		<p class="max-w-screen-md text-white p-2">Contact is today to book your chimney sweep by calling us or via email on the Contact page.</p>
 		<a
 			href="/contact"
 			class="mt-10 uppercase inline-block text-white bg-redTheme hover:bg-redThemeDark transition-colors px-8 mb-10 py-3 text-sm"
@@ -228,9 +228,9 @@ import { onDestroy, onMount } from 'svelte';
 	<div class="relative z-1 max-w-screen-md mx-auto">
 		
 		<!-- Invisible to set the height -->
-		<div class="w-full py-0 md:py-20 opacity-0 select-none">
+		<div class="w-full py-0 md:py-20 opacity-0 select-none ">
 			<p class="text-white text-xl">{largestTestimonal.quote}</p>
-			<p class="text-white font-bold mt-6">- {largestTestimonal.name}</p>
+			<p class="text-white font-bold mt-6 ">- {largestTestimonal.name}</p>
 		</div>
 
 		<div class="flex justify-center align-middle">

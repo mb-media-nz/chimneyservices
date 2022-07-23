@@ -70,7 +70,15 @@
 </div>
 
 <!-- Contact Form -->
+<form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="flex flex-col max-w-xl mx-auto px-6 mb-20">
+    <input required class="border p-2 my-2" type="text" name="name" placeholder="Name" />
+    <input required class="border p-2 my-2" type="email" name="Email" placeholder="Email" />
+    <input class="border p-2 my-2" type="tel" name="Phone" placeholder="Phone" />
+    <input class="hidden" name="bot-field" />
+    <textarea required class="border p-2 my-2" rows="5" name="message" placeholder="Message"></textarea>
+    <button type="submit" class="uppercase text-white bg-redTheme hover:bg-redThemeDark transition-colors px-8 py-3 text-sm inline-flex w-[100px]">Send</button>
 
+  </form>
 
 <BookBar />
 
