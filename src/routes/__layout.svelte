@@ -5,7 +5,7 @@
 
 	import { navigating } from '$app/stores';
 	import { hideMobileMenu, updateActiveMenu } from '../lib/common';
-import { onMount } from 'svelte';
+	import { onMount } from 'svelte';
 
 	onMount(async () => {
 		// When click nav-icon, toggle mobile menu

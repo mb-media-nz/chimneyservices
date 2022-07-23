@@ -223,7 +223,7 @@ import { onDestroy, onMount } from 'svelte';
 
 
 <!-- Testimonials -->
-<div class="bg-[url('home-reviews-bg.webp')] bg-center bg-cover bg-no-repeat relative p-14">
+<div class="bg-[url('/home-reviews-bg.webp')] bg-center bg-cover bg-no-repeat relative p-14">
 	<div class="bg-black absolute top-0 left-0 w-full h-full opacity-60"></div>
 	<div class="relative z-1 max-w-screen-md mx-auto">
 		
