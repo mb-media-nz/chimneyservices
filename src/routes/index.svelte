@@ -111,6 +111,17 @@ import { onDestroy, onMount } from 'svelte';
 	let homeTimer:any = null	
 
 	onMount( () => {
+
+		// Remove style from .home-text-container
+		const homeTextContainer = document.querySelectorAll('.home-text-container')
+
+		homeTextContainer.forEach(el => {
+			el.style.display = ''
+			console.log("removed")
+		})
+
+
+
 		// Every 4 seconds change the banner text
 		let currentHomeBannerText = 0
 
@@ -160,7 +171,7 @@ import { onDestroy, onMount } from 'svelte';
 		</div>
 	</div>
 
-	<div class="opacity-0 transition-opacity home-text-container absolute top-0 left-0 w-full h-full flex justify-center items-center flex-col z-10 text-white text-center">
+	<div style="display: none;" class="opacity-0 transition-opacity home-text-container absolute top-0 left-0 w-full h-full flex justify-center items-center flex-col z-10 text-white text-center">
 		<h2 class="text-center text-4xl  bg-opacity-60 p-1 z-10 relative mb-10 p-2">Healthier Homes Canterbury</h2>
 		<p class="max-w-screen-md text-white p-2">Borrow up to $6,000 for heating/installation costs, and put it on your rates bill to be paid back over 9 years at a set interest rate through ECan's Healthier Homes Canterbury scheme.</p>
 		<a
@@ -175,7 +186,7 @@ import { onDestroy, onMount } from 'svelte';
 		</div>
 	</div>
 
-	<div class="opacity-0 transition-opacity home-text-container absolute top-0 left-0 w-full h-full flex justify-center items-center flex-col z-10 text-white text-center">
+	<div style="display: none;" class="opacity-0 transition-opacity home-text-container absolute top-0 left-0 w-full h-full flex justify-center items-center flex-col z-10 text-white text-center">
 		<h2 class=" text-center text-4xl bg-opacity-60 p-1 z-10 relative mb-10 p-2">Contact Us Online</h2>
 		<p class="max-w-screen-md text-white p-2">Contact is today to book your chimney sweep by calling us or via email on the Contact page.</p>
 		<a

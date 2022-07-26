@@ -40,7 +40,7 @@
 	<nav class="flex justify-between p-6 max-w-screen-xl mx-auto">
 		<div>
 			<a href="/"
-				><img src="/logo-258.webp" alt="Murray's Chimney Services Logo" class="max-h-14" /></a
+				><img src="/logo-258.webp" height=56 alt="Murray's Chimney Services Logo" class="max-h-14" /></a
 			>
 		</div>
 
