@@ -4,6 +4,11 @@
 	
 	onMount(async () => {
 		updateActiveMenu(window.location.pathname)
+
+		const mobileMenu = document.querySelector("#mobile-menu-container")
+		if (mobileMenu) {
+			mobileMenu.style.display = "";
+		}
 	});
 
 	// Create menu links
@@ -66,7 +71,7 @@
 	</nav>
 
 	<!-- Mobile Menu -->
-	<div class="relative">
+	<div id="mobile-menu-container" class="relative" style="display: none;">
 		<ul
 			class="mobile-menu z-20 absolute top-0 left-0 w-full bg-gray-100 flex flex-col xmd:hidden p-4 font-heading uppercase items-center justify-center py-10"
 		>

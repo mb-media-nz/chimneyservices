@@ -166,7 +166,7 @@ import { onDestroy, onMount } from 'svelte';
 		<a
 			href="/healthier-homes"
 			class="mt-10 uppercase inline-block text-white bg-redTheme hover:bg-redThemeDark transition-colors px-8 mb-10 py-3 text-sm"
-			>Read More</a
+			>Scheme Info</a
 		>
 		<div class="absolute bottom-4 flex">
 			<div class="mx-1 bg-white w-2 h-2 rounded-full opacity-30"></div>
@@ -181,7 +181,7 @@ import { onDestroy, onMount } from 'svelte';
 		<a
 			href="/contact"
 			class="mt-10 uppercase inline-block text-white bg-redTheme hover:bg-redThemeDark transition-colors px-8 mb-10 py-3 text-sm"
-			>Contact</a
+			>Contact Details</a
 		>
 		<div class="absolute bottom-4 flex">
 			<div class="mx-1 bg-white w-2 h-2 rounded-full opacity-30"></div>
@@ -264,7 +264,7 @@ import { onDestroy, onMount } from 'svelte';
 		<a
 			href="/about"
 			class="uppercase inline-block text-white bg-redTheme hover:bg-redThemeDark transition-colors px-8 mb-10 py-3 text-sm"
-			>Read More</a
+			>Our Practices</a
 		>
 	</div>
 	<div class="w-full flex md:block md:w-1/3 p-2 md:p-8">
