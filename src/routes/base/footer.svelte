@@ -55,7 +55,7 @@
 				<li
 					class="transition-colors mb-1 text-gray-700 hover:text-gray-600 tracking-wider font-light"
 				>
-					<a href="mailto:contact@chimneyservices.co.nz">contact@chimneyservices.co.nz</a>
+					<a href="mailto:admin@chimneyservices.co.nz">admin@chimneyservices.co.nz</a>
 				</li>
 				<li
 					class="transition-colors mb-1 text-gray-700 hover:text-gray-600 tracking-wider font-light"
