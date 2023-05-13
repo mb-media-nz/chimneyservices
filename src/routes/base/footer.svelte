@@ -22,7 +22,7 @@
 		}
 	];
 
-	const currentYear = new Date().getFullYear() ;
+	const currentYear = new Date().getFullYear();
 </script>
 
 <footer class=" bg-gray-100 p-10">
@@ -81,5 +81,6 @@
 	</div>
 </footer>
 <div class="bg-gray-200 text-center text-sm p-2 text-gray-500">
-	© {currentYear}. Website created by <a href="https://mbmedia.co.nz" target="_blank">MB Media</a>
+	© {currentYear}. Website created by
+	<a href="https://mediahost.nz" target="_blank" class="font-bold">MediaHost.nz</a>
 </div>
