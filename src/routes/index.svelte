@@ -116,7 +116,7 @@ import { onDestroy, onMount } from 'svelte';
 		let currentHomeBannerText = 0
 
 		homeTimer = setInterval(() => {
-			currentHomeBannerText = (currentHomeBannerText == 2) ? 0 : currentHomeBannerText+1 
+			currentHomeBannerText = (currentHomeBannerText == 1) ? 0 : currentHomeBannerText+1 
 			document.querySelectorAll('.home-text-container').forEach((el)=> {
 				el.classList.add('opacity-0')
 			})
@@ -157,22 +157,6 @@ import { onDestroy, onMount } from 'svelte';
 		<div class="absolute bottom-4 flex">
 			<div class="mx-1 bg-white w-2 h-2 rounded-full"></div>
 			<div class="mx-1 bg-white w-2 h-2 rounded-full opacity-30"></div>
-			<div class="mx-1 bg-white w-2 h-2 rounded-full opacity-30"></div>
-		</div>
-	</div>
-
-	<div class="opacity-0 transition-opacity home-text-container absolute top-0 left-0 w-full h-full flex justify-center items-center flex-col z-10 text-white text-center">
-		<h2 class="text-center text-4xl  bg-opacity-60 p-1 z-10 relative mb-10 p-2">Healthier Homes Canterbury</h2>
-		<p class="max-w-screen-md text-white p-2">Borrow up to $6,000 for heating/installation costs, and put it on your rates bill to be paid back over 9 years at a set interest rate through ECan's Healthier Homes Canterbury scheme.</p>
-		<a
-			href="/healthier-homes"
-			class="mt-10 uppercase inline-block text-white bg-redTheme hover:bg-redThemeDark transition-colors px-8 mb-10 py-3 text-sm"
-			>Scheme Info</a
-		>
-		<div class="absolute bottom-4 flex">
-			<div class="mx-1 bg-white w-2 h-2 rounded-full opacity-30"></div>
-			<div class="mx-1 bg-white w-2 h-2 rounded-full"></div>
-			<div class="mx-1 bg-white w-2 h-2 rounded-full opacity-30"></div>
 		</div>
 	</div>
 
@@ -185,7 +169,6 @@ import { onDestroy, onMount } from 'svelte';
 			>Contact Details</a
 		>
 		<div class="absolute bottom-4 flex">
-			<div class="mx-1 bg-white w-2 h-2 rounded-full opacity-30"></div>
 			<div class="mx-1 bg-white w-2 h-2 rounded-full opacity-30"></div>
 			<div class="mx-1 bg-white w-2 h-2 rounded-full"></div>
 		</div>
@@ -257,7 +240,6 @@ import { onDestroy, onMount } from 'svelte';
 		<p>Murray’s Chimney Services has been operating in South Canterbury for over 50 years, servicing locally as well as in the surrounding districts.</p>
 		<p>Working with our technicians provides the following benefits:</p>
 		<ul class="list-disc pl-10 mt-4 mb-10">
-			<li>Ecan Healthier Homes Scheme approved contractor</li>
 			<li>NZHHA accredited installer</li>
 			<li>NZHHA accredited chimney sweep</li>
 			<li>Gold card NZ</li>
