@@ -9,10 +9,6 @@
 			href: '/about'
 		},
 		{
-			name: 'Healthier Homes',
-			href: '/healthier-homes'
-		},
-		{
 			name: 'FAQ',
 			href: '/faq'
 		},
